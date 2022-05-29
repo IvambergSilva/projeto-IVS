@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script/script.js" defer></script>
+    <link rel="stylesheet" href="style/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>IVS</h1>
+            <h2>Quantas pessoas moram na sua casa de origem (inclusive o estudante)?</h2>
+            <input type="number" min="0" value="0" name="qtdePessoas" id="qtdePessoas" class="dado1">
+            <button class="btn">Validar quantidade de pessoas</button>
+        </section>
+        
+        <section class="rendaFamiliar">
+            <h2>Renda bruta familiar per capita - RF</h2>
+            <form action="rendaFamiliar">
+                <input type="radio" name="inputRF" id="rf1">
+                <label for="rf1">0 a 0,25 s.m.</label>
+                <br>
+                <input type="radio" name="inputRF" id="rf2">
+                <label for="rf2">0,26 a 0,50 s.m.</label>
+                <br>
+                <input type="radio" name="inputRF" id="rf3">
+                <label for="rf3">0,51 a 0,75 s.m.</label>
+                <br>
+                <input type="radio" name="inputRF" id="rf4">
+                <label for="rf4">0,76 a 1 s.m.</label>
+                <br>
+                <input type="radio" name="inputRF" id="rf5">
+                <label for="rf5">1,1 a 1,5 s.m.</label>
+                <br>
+                <input type="radio" name="inputRF" id="rf6">
+                <label for="rf6">Acima 1,51 s.m.</label>
+            </form>
+            <button class="btnValidarRF">VALIDAR RF</button>
+        </section>
+        <section class="situacaoEmprego">
+            <h2>Situação de emprego, trabalho ou ocupação por pessoa do grupo familiar - SE</h2>
+            <form action="situacaoEmprego">
+                <div>
+                    <input type="number" min="0" value="0" name="inputSE" id="se1" class="dado2">
+                    <label for="se1">Pessoa com vínculo formal de trabalho / aposentado / pensionista por morte</label>
+                </div>
+                <div>
+                    <input type="number" min="0" value="0" name="inputSE" id="se2">
+                    <label for="se2">Jovem Aprendiz</label>
+                </div>
+                <div>
+                    <input type="number" min="0" value="0" name="inputSE" id="se3">
+                    <label for="se3">Autônomo/Profissional Liberal</label>
+                </div>
+                <div>
+                    <input type="number" min="0" value="0" name="inputSE" id="se4">
+                    <label for="se4">Pessoa em cumprimento de Aviso prévio ou em recebimento de segurodesemprego</label>
+                </div>
+                <div>
+                    <input type="number" min="0" value="0" name="inputSE" id="se5">
+                    <label for="se5">Pessoa sem vínculo formal de trabalho / Agricultor, produtor rural ou pescador artesanal /rendimento proveniente de aluguel de imóveis</label>
+                </div>
+                <div>
+                    <input type="number" min="0" value="0" name="inputSE" id="se6">
+                    <label for="se6">Desempregado(a)</label>
+                </div>
+            </form>
+            <button class="btnValidarSE">Validar Situação de emprego</button>
+        </section>
+        
+        <section class="cadUnico">
+            <h2>Cadastro do CadÚnico - CC</h2>
+            <form action="cadUnico">
+                <input type="radio" name="CC" id="simCC" >
+                <label for="simCC">SIM</label>
+                <input type="radio" name="CC" id="naoCC">
+                <label for="naoCC">NÃO</label>
+            </form>
+            <button class="btnValidarCC">Validar CadÚnico</button>
+        </section>
+        <section class="composicaoFamiliar">
+            <h2>Composição familiar (por pessoa do grupo familiar) - CF</h2>
+            <form action="composicaoFamiliar">
+                <div>
+                    <input type="number" min="0" name="CF" id="jovensAdultos" class="CF1" value="0">
+                    <label for="jovensAdultos">Jovens e Adultos</label>
+                </div>
+                <div>
+                    <input type="number" min="0" name="CF" id="adolescentes" class="CF2" value="0">
+                    <label for="adolescentes">Adolescentes</label>
+                </div>
+                <div>
+                    <input type="number" min="0" name="CF" id="criancas" class="CF3" value="0">
+                    <label for="criancas">Crianças</label>
+                </div>
+                <div>
+                    <input type="number" min="0" name="CF" id="idosos" class="CF4" value="0">
+                    <label for="idosos">Idosos</label>
+                </div>
+            </form>
+            <button class="btnValidarCF">Validar Composição Familiar</button>
+        </section>
+        <section class="regimeOcupacao">
+            <h2>Regime de ocupação do domicílio familiar - DF</h2>
+            <form action="regimeOcupacao">
+                <input type="radio" checked name="DF" id="propria" class="DF1">
+                <label for="propria">Própria</label>
+                <br>
+                <input type="radio" name="DF" id="financiada" class="DF2">
+                <label for="financiada">Financiada</label>
+                <br>
+                <input type="radio" name="DF" id="alugada" class="DF3">
+                <label for="alugada">Alugada</label>
+                <br>
+                <input type="radio" name="DF" id="assentamento" class="DF4">
+                <label for="assentamento">Assentamento proveniente de reforma agrária </label>
+                <br>
+                <input type="radio" name="DF" id="situacaoRua" class="DF5">
+                <label for="situacaoRuasituacaoRua">Domicílio em imóvel ocupado/situação de rua </label>
+            </form>
+            <button class="btnValidarDF">Validar Regime de Ocupação</button>
+        </section>
+        <section class="situacaoTerritorial">
+            <h2>Situação territorial do domicílio familiar - ST</h2>
+            <form action="situacaoTerritorial">
+                <input type="radio" name="ST" id="zonaUrbana">
+                <label for="zonaUrbana">Zona Urbana</label>
+                <input type="radio" name="ST" id="zonaRural" checked>
+                <label for="zonaRural">Zona Rural</label>
+            </form>
+            <button class="btnValidarST">Validar Situação Territorial</button>
+        </section>
+        <section class="localizacaoDomicilio">
+            <h2>Localização do domicílio familiar - LD</h2>
+            <form action="localizacaoDomicilio">
+                <input type="radio" name="LD" id="jpLD" checked>
+                <label for="jpLD">Dentro da cidade de João Pessoa</label>
+                <input type="radio" name="LD" id="regiaoMetroLD" >
+                <label for="regiaoMetroLD">Região metropolitana </label>
+                <input type="radio" name="LD" id="outraCidadeLD">
+                <label for="outraCidadeLD">Outra cidade</label>
+            </form>
+            <button class="btnValidarLD">Validar Mobilidade Estudantil</button>
+        </section>
+        <section class="mobEstudantil">
+            <h2>Situação de mobilidade estudantil</h2>
+            <form action="mobEstudantil">
+                <input type="radio" name="ME" id="simME">
+                <label for="simME">SIM</label>
+                <input type="radio" name="ME" id="naoME" checked>
+                <label for="naoME">NÃO</label>
+            </form>
+            <button class="btnValidarME">Validar Mobilidade Estudantil</button>
+        </section>
+        <section class="egressoEnsino">
+            <h2>Egresso de ensino fundamental ou médio (estudante) - ano anterior ao ingresso no IF - EP</h2>
+            <form action="egressoEnsino">
+                <input type="radio" name="EP" id="escParticular" checked>
+                <label for="escParticular">Ensino regular em escola particular</label>
+                <input type="radio" name="EP" id="escPublica">
+                <label for="escPublica">Ensino regular em escola pública</label>
+            </form>
+            <button class="btnValidarEP">Validar Egresso de ensino</button>
+        </section>
+        <button class="btnCalcular">Calcular IVS</button>
+        <div id="resultadoIVS"></div>
+    </main>
+</body>
+</html>
